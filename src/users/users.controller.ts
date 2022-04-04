@@ -6,7 +6,7 @@ import {
   Query,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { PaginationDto } from '../utils/dto/pagination.dto';
+import { PaginationDto } from '../pagination/dto/pagination.dto';
 
 @Controller('users')
 export class UsersController {
