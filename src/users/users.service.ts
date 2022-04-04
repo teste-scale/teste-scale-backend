@@ -2,8 +2,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectMapper } from '@automapper/nestjs';
 import { Mapper } from '@automapper/core';
 import { PrismaService } from '../prisma.service';
-import { Pagination } from '../utils/models/pagination.model';
-import { PaginationDto } from 'src/utils/dto/pagination.dto';
+import { Pagination } from '../pagination/models/pagination.model';
+import { PaginationDto } from '../pagination/dto/pagination.dto';
 
 @Injectable()
 export class UsersService {
