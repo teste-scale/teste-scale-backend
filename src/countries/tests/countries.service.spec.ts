@@ -46,7 +46,7 @@ describe('CountriesService', () => {
     );
     const listSort = mockCountriesData
       .map((country: CountryDto) => country.fronteiras.length)
-      .sort((a, b) => a - b);
+      .sort((a, b) => b - a);
     expect(listMergeSort).toEqual(listSort);
   });
 });

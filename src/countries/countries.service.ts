@@ -10,9 +10,9 @@ import { SortHelper } from '..//utils/helpers/sort.helper';
 @Injectable()
 export class CountriesService {
   private readonly endpoint: string =
-    'http://www.amock.io/api/fcmaia/countries';
-  // Api duplicada:
-  //'https://testecountry.free.beeceptor.com/';
+    'https://testecountry.free.beeceptor.com/';
+  // Api original:
+  //'http://www.amock.io/api/fcmaia/countries';
 
   constructor(
     private httpService: HttpService,
@@ -32,7 +32,7 @@ export class CountriesService {
     const sortData = SortHelper.mergeSort(
       request.data,
       (left: CountryModel, right: CountryModel) => {
-        return left.fronteiras.length < right.fronteiras.length;
+        return left.fronteiras.length > right.fronteiras.length;
       },
     );
 
